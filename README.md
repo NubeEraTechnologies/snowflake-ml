@@ -87,10 +87,6 @@ INSERT INTO CUSTOMERS_RAW VALUES
 ```sql
 SELECT * FROM CUSTOMERS_RAW;
 ```
-Perfect 👍
-Below is a **ready-to-copy `README.md` section** that clearly explains **how to select Snowflake packages and Python 3.9**, written for **beginners** and **trainers**.
-
-You can paste this **as-is** into your project README.
 
 ---
 
