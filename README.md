@@ -94,8 +94,6 @@ You can paste this **as-is** into your project README.
 
 ---
 
-# 📘 README.md
-
 ## Snowflake ML + Snowpark Python Setup Guide
 
 This project uses **Snowflake in-database Machine Learning** with **Snowpark Python**.
