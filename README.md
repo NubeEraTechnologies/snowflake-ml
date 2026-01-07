@@ -87,6 +87,136 @@ INSERT INTO CUSTOMERS_RAW VALUES
 ```sql
 SELECT * FROM CUSTOMERS_RAW;
 ```
+Perfect 👍
+Below is a **ready-to-copy `README.md` section** that clearly explains **how to select Snowflake packages and Python 3.9**, written for **beginners** and **trainers**.
+
+You can paste this **as-is** into your project README.
+
+---
+
+# 📘 README.md
+
+## Snowflake ML + Snowpark Python Setup Guide
+
+This project uses **Snowflake in-database Machine Learning** with **Snowpark Python**.
+Follow the steps below carefully to configure the correct **packages** and **Python version** in Snowflake.
+
+---
+
+## 🧩 Prerequisites
+
+Before running this project, make sure you have:
+
+* A **Snowflake account** (Free Trial is sufficient)
+* Access to **Snowsight UI**
+* Role: `ACCOUNTADMIN` or `SYSADMIN`
+
+---
+
+## 🐍 Python Version Requirement (IMPORTANT)
+
+✅ This project **requires Python 3.9**
+
+Snowflake ML libraries are fully supported and stable on **Python 3.9**.
+Using other versions may cause unexpected errors.
+
+---
+
+## ⚙️ Step-by-Step: Configure Python Worksheet in Snowflake
+
+### Step 1: Open a Python Worksheet
+
+1. Login to **Snowsight**
+2. Go to **Worksheets**
+3. Click **+ Worksheet**
+4. Select **Python** (not SQL)
+
+---
+
+### Step 2: Select Python Runtime Version
+
+1. In the **top-right corner** of the worksheet, click **Packages**
+2. Locate **Python Runtime**
+3. Select:
+
+```
+Python 3.9
+```
+
+📌 **Do not use Python 3.10 or 3.11 for this project**
+
+---
+
+### Step 3: Select Required Packages
+
+In the same **Packages** panel, search and add the following packages:
+
+#### ✅ Required Packages
+
+✔ `snowflake-snowpark-python`
+✔ `snowflake-ml-python`
+
+Make sure **both are selected**.
+
+📌 These packages are provided and managed by Snowflake (no pip install required).
+
+---
+
+### Step 4: Verify Package Imports (Test)
+
+Add the following code at the top of your Python worksheet and run it:
+
+```python
+import snowflake.snowpark as snowpark
+from snowflake.ml.modeling.linear_model import LogisticRegression
+from snowflake.ml.registry import Registry
+
+print("✅ Snowflake Snowpark and ML packages loaded successfully")
+```
+
+If you see the success message → your environment is ready 🎉
+
+---
+
+## 📦 Why These Packages Are Required
+
+### `snowflake-snowpark-python`
+
+Used for:
+
+* Reading Snowflake tables as DataFrames
+* Data transformation inside Snowflake
+* Writing processed data back to Snowflake
+
+### `snowflake-ml-python`
+
+Used for:
+
+* Training ML models inside Snowflake
+* Feature engineering
+* Model Registry (versioning & governance)
+* Deploying models as SQL functions
+
+---
+
+## ⚠️ Common Mistakes to Avoid
+
+❌ Using Python 3.10+
+❌ Forgetting to add `snowflake-ml-python`
+❌ Trying to use `pip install` inside Snowflake
+❌ Running ML code in SQL worksheet
+
+---
+
+## ✅ Recommended Environment Checklist
+
+Before running the project, ensure:
+
+* [x] Python Worksheet selected
+* [x] Python version = **3.9**
+* [x] `snowflake-snowpark-python` added
+* [x] `snowflake-ml-python` added
+* [x] Correct role (`ACCOUNTADMIN` or `SYSADMIN`)
 
 ---
 
