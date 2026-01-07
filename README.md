@@ -160,22 +160,6 @@ Make sure **both are selected**.
 
 ---
 
-### Step 4: Verify Package Imports (Test)
-
-Add the following code at the top of your Python worksheet and run it:
-
-```python
-import snowflake.snowpark as snowpark
-from snowflake.ml.modeling.linear_model import LogisticRegression
-from snowflake.ml.registry import Registry
-
-print("✅ Snowflake Snowpark and ML packages loaded successfully")
-```
-
-If you see the success message → your environment is ready 🎉
-
----
-
 ## 📦 Why These Packages Are Required
 
 ### `snowflake-snowpark-python`
